@@ -256,11 +256,11 @@ resource "kubernetes_daemonset" "this" {
             protocol       = "TCP"
           }
           resources {
-            limits {
+            limits = {
               cpu    = "100m"
               memory = "128Mi"
             }
-            requests {
+            requests = {
               cpu    = "50m"
               memory = "64Mi"
             }
